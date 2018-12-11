@@ -1,0 +1,361 @@
+.work {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-rows: 1fr repeat(5, 40rem);
+
+    grid-column-gap: 4rem;
+    grid-row-gap: 8rem;
+
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr) repeat(8, 40rem);
+    }
+
+    &__description {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        p {
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 5rem;
+
+            color: $grey1;
+
+            @media only screen and (max-width: $bp-large) {
+                br {
+                    display: none;
+                }
+            }
+
+            @media only screen and (max-width: $bp-smallest) {
+                text-align: center;
+            }
+        }
+    }
+
+    &__graphicDesign {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-large) {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        &_title {
+            font-size: 1.5rem;
+            font-weight: 600;
+
+            color: $grey1;
+
+            margin-bottom: 2rem;
+
+            width: auto;
+            word-wrap: break-word;
+
+            @media only screen and (max-width: $bp-large) {
+                margin-bottom: 0;
+            }
+        }
+
+        p {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.4;
+
+            color: $grey2;
+
+            @media only screen and (max-width: $bp-large) {
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.position {
+    &_01 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+
+        border-radius: 3px;
+
+        background-image: url(../img/case1.jpg);
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+        }
+    }
+
+    &_02 {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+
+        border-radius: 3px;
+
+        background-image: url(../img/case2.jpg);
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+        }
+    }
+
+    &_03 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+
+        border-radius: 3px;
+
+        background-image: url(../img/case3.jpg);
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 1 / 2;
+            grid-row: 5 / 6;
+
+            display: none;
+        }
+    }
+
+    &_04 {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+
+        border-radius: 3px;
+
+        background-image: url(../img/case4.jpg);
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 1 / 2;
+            grid-row: 6 / 7;
+
+            display: none;
+        }
+    }
+
+    &_05 {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+
+        border-radius: 3px;
+
+        background-image: url(../img/case5.jpg);
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 1 / 2;
+            grid-row: 5 / 6;
+        }
+    }
+
+    &_06 {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+
+        border-radius: 3px;
+
+        background-image: url(../img/case6.jpg);
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 1 / 2;
+            grid-row: 6 / 7;
+        }
+    }
+
+    &_07 {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+
+        border-radius: 3px;
+
+        background-image: url(../img/case7.jpg);
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 1 / 2;
+            grid-row: 7 / 8;
+        }
+    }
+
+    &_08 {
+        grid-column: 2 / 3;
+        grid-row: 5 / 6;
+
+        border-radius: 3px;
+
+        background-image: url(../img/case8.jpg);
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 1 / 2;
+            grid-row: 8 / 9;
+        }
+    }
+
+    &_09 {
+        grid-column: 1 / 2;
+        grid-row: 6 / 7;
+
+        border-radius: 3px;
+
+        background-image: url(../img/case9.jpg);
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 1 / 2;
+            grid-row: 9 / 10;
+        }
+    }
+
+    &_10 {
+        grid-column: 2 / 3;
+        grid-row: 6 / 7;
+
+        border-radius: 3px;
+
+        background-image: url(../img/case10.jpg);
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 1 / 2;
+            grid-row: 10 / 11;
+        }
+    }
+}
+
+.workCase {
+    position: relative;
+    overflow: hidden;
+
+    &__visit {
+        @include center;
+        opacity: 0;
+
+        @media only screen and (max-width: $bp-large) {
+            opacity: 1;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    &:hover .workCase__visit {
+        opacity: 1;
+        transition: all .5s;
+    }
+
+    &::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-color: $white;
+        z-index: 5;
+        display: block;
+        opacity: 0;
+        transition: all .5s;
+
+        @media only screen and (max-width: $bp-large) {
+            opacity: 0.5;
+        }
+    }
+
+    &:hover::before {
+        opacity: 0.5;
+    }
+
+    &__description {
+        background-color: white;
+
+        bottom: 0;
+        width: 100%;
+
+        position: absolute;
+
+        padding-top: 2rem;
+
+        @media only screen and (max-width: $bp-large) {
+            height: 30%;
+        }
+
+        &_head {
+            display: flex;
+            justify-content: space-between;
+
+            margin-bottom: 2rem;
+
+            &-title {
+                color: $grey1;
+                font-size: 1.4rem;
+                font-weight: 600;
+            }
+
+            &-industry {
+                color: $grey5;
+                font-size: 1.4rem;
+                font-weight: 400;
+            }
+        }
+
+        &_body {
+            p {
+                display: inline-block;
+                border: 1px solid $grey5;
+                padding: 0.5rem 1rem;
+                border-radius: 3px;
+
+                color: $grey2;
+                font-size: 1.3rem;
+                font-weight: 500;
+
+                @media only screen and (max-width: $bp-large) {
+                    margin-bottom: .5rem;
+                }
+            }
+
+            p:not(:last-child) {
+                margin-right: .5rem;
+            }
+        }
+    }
+}
+
+.incomplete {
+    float: right;
+    color: red !important;
+    border: 1px solid red !important;
+
+    @media only screen and (max-width: $bp-large) {
+        display: none !important;
+    }
+}
+
+.workingOn {
+    float: right;
+    color: green !important;
+    border: 1px solid green !important;
+
+    @media only screen and (max-width: $bp-large) {
+        display: none !important;
+    }
+}

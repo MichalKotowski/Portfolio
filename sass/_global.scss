@@ -1,0 +1,209 @@
+$bp-enormous: 81.25em; // 1300px
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px
+$bp-small: 43.75em; // 700px
+$bp-smallest: 31.25em; // 500px
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+
+    overflow-y: scroll;
+
+    @media only screen and (max-width: $bp-enormous) {
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        overflow-y: auto;
+    }
+
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+$primaryColor: #2ed8bb;
+
+$grey1: #121416;
+$grey2: #323435;
+$grey3: #515454;
+$grey4: #717373;
+$grey5: #909292;
+$grey6: #B0B1B1;
+$grey7: #D0D1D0;
+
+$white: #fff;
+
+.container {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1fr 120rem 1fr;
+    grid-template-rows: 10rem 1fr;
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-columns: 1fr 90rem 1fr;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: 1fr 80rem 1fr;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr 60rem 1fr;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr 55rem 1fr;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        grid-template-columns: 1fr;
+        margin: 0 2rem;
+    }
+
+    &__navigation {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        z-index: 100;
+
+        &_title {
+            font-size: 2rem;
+            font-weight: 600;
+
+            color: $grey2;
+
+            @media only screen and (max-width: $bp-small) {
+                display: none;
+            }
+        }
+
+        &_menu {
+            display: flex;
+            align-items: center;
+
+            a {
+                color: $grey1;
+                text-decoration: none;
+                font-size: 1.5rem;
+                font-weight: 500;
+
+                color: $grey2;
+            }
+
+            &-link:not(:last-child) {
+                margin-right: 6rem;
+
+                @media only screen and (max-width: $bp-medium) {
+                    margin-right: 4rem;
+                }
+            }
+        }
+    }
+}
+
+.mrSmall {
+    margin-right: 2rem;
+    ;
+}
+
+.buttonPrimary {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: $grey1;
+    border: none;
+    border-radius: 2rem;
+
+    width: 14rem;
+    height: 4rem;
+
+    color: $white;
+
+    cursor: pointer;
+
+    &-menu {
+        @media only screen and (max-width: $bp-smallest) {
+            display: none;
+        }
+    }
+
+    &-icon {
+        font-size: 3rem;
+
+        display: inline-block;
+    }
+
+    &-text {
+        display: inline-block;
+
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+}
+
+.buttonSecondary {
+    color: $grey1;
+    border-radius: 2rem;
+    border: 1px solid $grey1;
+    background-color: transparent;
+    height: 4rem;
+    width: 14rem;
+    cursor: pointer;
+
+    @media only screen and (max-width: $bp-smallest) {
+        height: 3rem;
+        width: 7.5rem;
+    }
+
+    &-graphic {
+        @media only screen and (max-width: $bp-smallest) {
+            height: 4rem;
+            width: 14rem;
+        }
+    }
+
+    &-text {
+        font-size: 1.4rem;
+        font-weight: 400;
+
+        color: $grey1;
+    }
+}
+
+.buttonHuge {
+    width: 18rem;
+    height: 6rem;
+
+    border-radius: 20rem;
+}
